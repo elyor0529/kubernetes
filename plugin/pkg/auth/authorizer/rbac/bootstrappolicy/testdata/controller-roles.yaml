@@ -1043,9 +1043,10 @@ items:
   - apiGroups:
     - ""
     resources:
+    - services
     - services/status
     verbs:
-    - update
+    - patch
   - apiGroups:
     - ""
     resources:
