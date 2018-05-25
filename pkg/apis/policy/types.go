@@ -229,11 +229,7 @@ type AllowedHostPath struct {
 	// `/foo` would not allow `/food` or `/etc/foo`
 	PathPrefix string
 
-	// when set to true, will allow host volumes matching the pathPrefix if all volume mounts are readOnly.
-	// If the container specifically requests to run with a non-read only volume that matches the path prefix
-	// then the PSP should deny the pod.
-	// If set to false the container may run with a read-only root volume if it wishes but it
-	// will not be forced to.
+	// when set to true, will allow host volumes matching the pathPrefix only if all volume mounts are readOnly.
 	ReadOnly bool
 }
 
